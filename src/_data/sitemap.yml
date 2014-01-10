@@ -1,0 +1,11 @@
+- title: Homepage
+  submenu:
+    - title: About
+      path: about
+    - title: Work
+      path: work
+    - title: Resume
+      path: resume
+    - title: Contact
+      path: contact
+          

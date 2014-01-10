@@ -1,0 +1,16 @@
+## the source for jekyll
+source: ./src
+
+## the destination that the generated site lives in
+destination: ./site
+
+## The datafile without the .yml extension that you want hastieWires to parse.
+## Must be a valid jekyll data file, see: http://jekyllrb.com/docs/datafiles/
+## See sample sitemap.yml for data rules
+hastieWires_dataFile: sitemap
+
+## whether to overwrite any statically declared files/directories or not. Will default to false.
+hastieWires_overwriteStatic: false
+
+## whether the plugin should write to the command line
+hastieWires_statusMsg: true
