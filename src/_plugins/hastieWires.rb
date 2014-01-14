@@ -6,7 +6,7 @@ require 'pathname'
 
 module Jekyll
   
-  class hastieWires_Page < Page
+  class HastieWiresPage < Page
     # The last modified date to be used for web caching of this file.
     # Added for use by a sitemap generator
     attr_accessor :src_mtime
@@ -83,7 +83,7 @@ module Jekyll
         #do nothing as the static file exists and the overwrite flag is set to false
         outputMsg("** skipped " + directory + fn + ".html -- file already existed in source directory")
       else
-        index = hastieWires_Page.new(self, self.config['source'], directory, fn) 
+        index = HastieWiresPage.new(self, self.config['source'], directory, fn) 
     
         #alter the front matter
         #page.has_key?("layout") ? index.data["layout"] = page["layout"] : ''
@@ -109,7 +109,7 @@ module Jekyll
       
       if page.has_key?("submenu")
         page["submenu"].each do |subpage,i|
-          hastieWires_Write(subpage, directory, page["path"])
+          _hastieWires_Do(subpage, directory, page["path"])
         end
       end
       
